@@ -1,0 +1,45 @@
+﻿@{
+  "Common.MenuQuit"             = "[ 終了 ]"
+  "Common.MenuCancel"           = "[ キャンセル ]"
+  "Common.PressAnyKey"          = "任意のキーでメニューに戻ります..."
+  "Common.FileNotFound"         = "{0} が見つかりません: {1}"
+  "Common.Error"                = "エラー: {0}"
+  "Common.Cancelled"            = "キャンセルしました。"
+  "Common.Required"             = "必須項目を入力してください。"
+
+  "Toolkit.Banner.Title"        = "ネットワークツールキット (NAT)"
+  "Toolkit.Banner.Version"      = "Ver {0}"
+  "Toolkit.Menu.Title"          = "機能を選択してください (↑↓ / Enter / ESC)"
+  "Toolkit.StartingTool"        = "起動中: {0}"
+  "Toolkit.Exit.Thanks"         = "ご利用ありがとうございました。"
+  "Toolkit.Exit.VersionLine"    = "バージョン: {0}"
+  "Toolkit.Exit.UpdatedLine"    = "最終更新: {0}"
+
+  "Nat.List.Title"              = "ポートマッピング一覧"
+  "Nat.List.Empty"              = "ポートマッピングはありません。"
+  "Nat.List.Count"              = "件数: {0}"
+  "Nat.Menu.Title"              = "NAT ツール (↑↓ / Enter / ESC)"
+  "Nat.Menu.Help"               = "一覧・作成・削除を選択してください。"
+
+  "Nat.Table.ListenAddress"     = "宿主IP"
+  "Nat.Table.ListenPort"        = "宿主ポート"
+  "Nat.Table.ConnectAddress"    = "転送先IP"
+  "Nat.Table.ConnectPort"       = "転送先ポート"
+  "Nat.Table.Protocol"          = "タイプ"
+
+  "Nat.Prompt.ListenAddress"    = "宿主IP (例: 0.0.0.0)"
+  "Nat.Prompt.ListenPort"       = "宿主ポート"
+  "Nat.Prompt.ConnectAddress"   = "転送先IP"
+  "Nat.Prompt.ConnectPort"      = "転送先ポート"
+
+  "Nat.New.Success"             = "ポートマッピングを作成しました。"
+  "Nat.Remove.SelectTitle"      = "削除対象を選択してください"
+  "Nat.Remove.SelectHint"       = "↑↓で選択 / Enter 決定 / ESC 戻る"
+  "Nat.Remove.Confirm"          = "削除しますか? {0}:{1} (yes で確定)"
+  "Nat.Remove.Success"          = "削除完了: {0}:{1}"
+
+  "Nat.Error.AdminRequired"     = "管理者権限で実行してください。"
+  "Nat.Error.Netsh"             = "netsh 実行エラー: {0}"
+  "Nat.Error.OperationFailed"   = "処理に失敗しました: {0}"
+  "Nat.Error.AlreadyExists"     = "既に存在します: {0}:{1}"
+}

@@ -1,0 +1,45 @@
+﻿@{
+  "Common.MenuQuit"             = "[ 退出 ]"
+  "Common.MenuCancel"           = "[ 取消 ]"
+  "Common.PressAnyKey"          = "按任意键返回菜单..."
+  "Common.FileNotFound"         = "{0} 不存在: {1}"
+  "Common.Error"                = "错误: {0}"
+  "Common.Cancelled"            = "已取消。"
+  "Common.Required"             = "请填写必填项。"
+
+  "Toolkit.Banner.Title"        = "网络工具集 (NAT)"
+  "Toolkit.Banner.Version"      = "Ver {0}"
+  "Toolkit.Menu.Title"          = "请选择功能 (↑↓ / Enter / ESC)"
+  "Toolkit.StartingTool"        = "启动中: {0}"
+  "Toolkit.Exit.Thanks"         = "感谢使用。"
+  "Toolkit.Exit.VersionLine"    = "版本: {0}"
+  "Toolkit.Exit.UpdatedLine"    = "最后更新: {0}"
+
+  "Nat.List.Title"              = "端口映射列表"
+  "Nat.List.Empty"              = "当前没有端口映射。"
+  "Nat.List.Count"              = "总数: {0}"
+  "Nat.Menu.Title"              = "NAT 工具 (↑↓ / Enter / ESC)"
+  "Nat.Menu.Help"               = "请选择查询、创建或删除。"
+
+  "Nat.Table.ListenAddress"     = "宿主IP"
+  "Nat.Table.ListenPort"        = "宿主端口"
+  "Nat.Table.ConnectAddress"    = "目标IP"
+  "Nat.Table.ConnectPort"       = "目标端口"
+  "Nat.Table.Protocol"          = "类型"
+
+  "Nat.Prompt.ListenAddress"    = "宿主IP (例: 0.0.0.0)"
+  "Nat.Prompt.ListenPort"       = "宿主端口"
+  "Nat.Prompt.ConnectAddress"   = "目标IP"
+  "Nat.Prompt.ConnectPort"      = "目标端口"
+
+  "Nat.New.Success"             = "端口映射创建成功。"
+  "Nat.Remove.SelectTitle"      = "请选择要删除的映射"
+  "Nat.Remove.SelectHint"       = "↑↓选择 / Enter确认 / ESC返回"
+  "Nat.Remove.Confirm"          = "确认删除 {0}:{1} ? (输入 yes 确认)"
+  "Nat.Remove.Success"          = "删除成功: {0}:{1}"
+
+  "Nat.Error.AdminRequired"     = "请使用管理员权限运行。"
+  "Nat.Error.Netsh"             = "netsh 执行失败: {0}"
+  "Nat.Error.OperationFailed"   = "操作失败: {0}"
+  "Nat.Error.AlreadyExists"     = "映射已存在: {0}:{1}"
+}

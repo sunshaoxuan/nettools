@@ -1,0 +1,45 @@
+﻿@{
+  "Common.MenuQuit"             = "[ Exit ]"
+  "Common.MenuCancel"           = "[ Cancel ]"
+  "Common.PressAnyKey"          = "Press any key to return to menu..."
+  "Common.FileNotFound"         = "{0} not found: {1}"
+  "Common.Error"                = "Error: {0}"
+  "Common.Cancelled"            = "Cancelled."
+  "Common.Required"             = "Required value is missing."
+
+  "Toolkit.Banner.Title"        = "Network Toolkit (NAT)"
+  "Toolkit.Banner.Version"      = "Ver {0}"
+  "Toolkit.Menu.Title"          = "Select function (↑↓ / Enter / ESC)"
+  "Toolkit.StartingTool"        = "Starting: {0}"
+  "Toolkit.Exit.Thanks"         = "Thanks for using this toolkit."
+  "Toolkit.Exit.VersionLine"    = "Version: {0}"
+  "Toolkit.Exit.UpdatedLine"    = "Last updated: {0}"
+
+  "Nat.List.Title"              = "Port Mappings"
+  "Nat.List.Empty"              = "No port mappings found."
+  "Nat.List.Count"              = "Count: {0}"
+  "Nat.Menu.Title"              = "NAT Tool (↑↓ / Enter / ESC)"
+  "Nat.Menu.Help"               = "Choose list, create, or delete."
+
+  "Nat.Table.ListenAddress"     = "Host IP"
+  "Nat.Table.ListenPort"        = "Host Port"
+  "Nat.Table.ConnectAddress"    = "Target IP"
+  "Nat.Table.ConnectPort"       = "Target Port"
+  "Nat.Table.Protocol"          = "Type"
+
+  "Nat.Prompt.ListenAddress"    = "Host IP (e.g. 0.0.0.0)"
+  "Nat.Prompt.ListenPort"       = "Host Port"
+  "Nat.Prompt.ConnectAddress"   = "Target IP"
+  "Nat.Prompt.ConnectPort"      = "Target Port"
+
+  "Nat.New.Success"             = "Port mapping created."
+  "Nat.Remove.SelectTitle"      = "Select mapping to delete"
+  "Nat.Remove.SelectHint"       = "Use ↑↓ / Enter / ESC"
+  "Nat.Remove.Confirm"          = "Delete {0}:{1}? (type yes to confirm)"
+  "Nat.Remove.Success"          = "Deleted: {0}:{1}"
+
+  "Nat.Error.AdminRequired"     = "Run as Administrator."
+  "Nat.Error.Netsh"             = "netsh execution failed: {0}"
+  "Nat.Error.OperationFailed"   = "Operation failed: {0}"
+  "Nat.Error.AlreadyExists"     = "Mapping already exists: {0}:{1}"
+}
