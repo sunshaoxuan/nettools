@@ -23,6 +23,7 @@ $LibDir = Join-Path $PSScriptRoot "lib"
 . (Join-Path $LibDir "i18n.ps1")
 . (Join-Path $LibDir "menu.ps1")
 . (Join-Path $LibDir "portproxy.ps1")
+. (Join-Path $LibDir "firewall.ps1")
 
 $__i18n = Initialize-I18n -Lang $Lang -BaseDir (Split-Path $PSScriptRoot -Parent)
 function T([string]$Key, [object[]]$FormatArgs = @()) { Get-I18nText -I18n $__i18n -Key $Key -FormatArgs $FormatArgs }
@@ -77,9 +78,30 @@ try {
         (T "Nat.Table.ConnectPort")    = $ConnectPort
         (T "Nat.Table.Protocol")       = "v4tov4"
     } | Format-Table -AutoSize
+
+    try {
+        $fwRules = @(Get-AllowInboundRulesByPort -Port $ListenPort)
+        if ($fwRules.Count -gt 0) {
+            Write-Host ""
+            Write-Host (T "Nat.New.FwAlreadyOpen" @($ListenPort, $fwRules.Count)) -ForegroundColor DarkYellow
+        }
+        else {
+            $fwResult = New-AllowInboundRuleForPort -Port $ListenPort -Protocol "TCP"
+            Write-Host ""
+            if ($fwResult.Created) {
+                Write-Host (T "Nat.New.FwAutoOpened" @($ListenPort, $fwResult.RuleName)) -ForegroundColor Green
+            }
+            else {
+                Write-Host (T "Nat.New.FwAlreadyOpenByName" @($ListenPort, $fwResult.RuleName)) -ForegroundColor DarkYellow
+            }
+        }
+    }
+    catch {
+        Write-Host ""
+        Write-Host (T "Nat.New.FwAutoOpenFailed" @($ListenPort, $_.Exception.Message)) -ForegroundColor Yellow
+    }
 }
 catch {
     Write-Host (T "Nat.Error.OperationFailed" @($_.Exception.Message)) -ForegroundColor Red
     exit 1
 }
-

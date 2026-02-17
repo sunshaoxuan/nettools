@@ -26,11 +26,19 @@ $LibDir = Join-Path $ScriptsDir "lib"
 
 . (Join-Path $LibDir "menu.ps1")
 . (Join-Path $LibDir "i18n.ps1")
+. (Join-Path $LibDir "portproxy.ps1")
 
 $__i18n = Initialize-I18n -Lang $Lang -BaseDir $PSScriptRoot
 
 function T([string]$Key, [object[]]$FormatArgs = @()) {
     return Get-I18nText -I18n $__i18n -Key $Key -FormatArgs $FormatArgs
+}
+
+if (-not (Test-IsAdministrator)) {
+    Write-Host ""
+    Write-Host (T "Toolkit.AdminRequired") -ForegroundColor Red
+    Write-Host ""
+    exit 1
 }
 
 $tools = @(
@@ -40,6 +48,14 @@ $tools = @(
         DescJa = "NAT ポートマッピング管理"
         DescZh = "NAT 端口映射管理"
         DescEn = "NAT port mapping manager"
+        Wait   = $true
+    },
+    @{
+        Name   = "Firewall"
+        Script = "utils\Invoke-FirewallTool.ps1"
+        DescJa = "ファイアウォールポート管理"
+        DescZh = "防火墙端口管理"
+        DescEn = "Firewall port manager"
         Wait   = $true
     }
 )
