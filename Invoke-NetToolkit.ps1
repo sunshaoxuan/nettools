@@ -118,14 +118,17 @@ try {
         Write-Host ""
         Write-Host (T "Toolkit.StartingTool" @($selectedTool.Name)) -ForegroundColor Yellow
         Write-Host ""
+        $toolExitCode = 0
         try {
             & $scriptPath -Lang $Lang
+            $toolExitCode = $LASTEXITCODE
         }
         catch {
             Write-Host (T "Common.Error" @($_.Exception.Message)) -ForegroundColor Red
+            $toolExitCode = 1
         }
 
-        if ($selectedTool.Wait) {
+        if ($selectedTool.Wait -and $toolExitCode -ne 99) {
             Write-Host ""
             Wait-AnyKey -Message (T "Common.PressAnyKey")
         }
