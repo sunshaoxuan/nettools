@@ -28,7 +28,7 @@
   "Nat.Table.ConnectPort"       = "転送先ポート"
   "Nat.Table.Protocol"          = "タイプ"
 
-  "Nat.Prompt.ListenAddress"    = "宿主IP (Enter=0.0.0.0)"
+  "Nat.Prompt.ListenAddress"    = "宿主IP（既定値 0.0.0.0、未入力で既定値を使用）"
   "Nat.Prompt.ListenPort"       = "宿主ポート"
   "Nat.Prompt.ConnectAddress"   = "転送先IP"
   "Nat.Prompt.ConnectPort"      = "転送先ポート"
