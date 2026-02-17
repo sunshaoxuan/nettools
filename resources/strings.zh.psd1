@@ -28,7 +28,7 @@
   "Nat.Table.ConnectPort"       = "目标端口"
   "Nat.Table.Protocol"          = "类型"
 
-  "Nat.Prompt.ListenAddress"    = "宿主IP (回车=0.0.0.0)"
+  "Nat.Prompt.ListenAddress"    = "宿主机IP（默认 0.0.0.0，回车使用默认）"
   "Nat.Prompt.ListenPort"       = "宿主端口"
   "Nat.Prompt.ConnectAddress"   = "目标IP"
   "Nat.Prompt.ConnectPort"      = "目标端口"
