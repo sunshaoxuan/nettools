@@ -46,9 +46,21 @@ function Read-RequiredInput([string]$Prompt) {
     return $value.Trim()
 }
 
+function Read-InputWithDefault([string]$Prompt, [string]$DefaultValue) {
+    $value = Read-HostWithEsc -Prompt $Prompt
+    if ($null -eq $value) {
+        Write-Host (T "Common.Cancelled") -ForegroundColor Yellow
+        exit 99
+    }
+    if ([string]::IsNullOrWhiteSpace($value)) {
+        return $DefaultValue
+    }
+    return $value.Trim()
+}
+
 try {
     if ([string]::IsNullOrWhiteSpace($ListenAddress)) {
-        $ListenAddress = Read-RequiredInput (T "Nat.Prompt.ListenAddress")
+        $ListenAddress = Read-InputWithDefault -Prompt (T "Nat.Prompt.ListenAddress") -DefaultValue "0.0.0.0"
     }
     if ($ListenPort -le 0) {
         $ListenPort = [int](Read-RequiredInput (T "Nat.Prompt.ListenPort"))

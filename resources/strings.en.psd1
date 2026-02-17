@@ -28,7 +28,7 @@
   "Nat.Table.ConnectPort"       = "Target Port"
   "Nat.Table.Protocol"          = "Type"
 
-  "Nat.Prompt.ListenAddress"    = "Host IP (e.g. 0.0.0.0)"
+  "Nat.Prompt.ListenAddress"    = "Host IP (Enter=0.0.0.0)"
   "Nat.Prompt.ListenPort"       = "Host Port"
   "Nat.Prompt.ConnectAddress"   = "Target IP"
   "Nat.Prompt.ConnectPort"      = "Target Port"
